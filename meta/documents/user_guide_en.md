@@ -1,4 +1,4 @@
-# Ceres O46 – A O46 Theme for Ceres 3
+# Ceres O46 – A O46 Theme for Ceres 5
 
 **Ceres O46** is a simple theme plugin that contains no style or design for Ceres 3. With the help of this theme, you can display your own CSS in Ceres. Furthermore, the templates of Ceres can be overridden with your own templates.
 

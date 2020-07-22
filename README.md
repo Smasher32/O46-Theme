@@ -4,7 +4,7 @@
 
 # O46theme
 
-A O46 Theme for Ceres 3.
+A O46 Theme for Ceres 5.
 
 
 ## Requirements
