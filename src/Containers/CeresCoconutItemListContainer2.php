@@ -1,13 +1,13 @@
 <?php
 
-namespace O46-Theme\Containers;
+namespace O46theme\Containers;
 
 use Plenty\Plugin\Templates\Twig;
 
-class O46-ThemeItemListContainer2
+class O46themeItemListContainer2
 {
     public function call(Twig $twig, $arg):string
     {
-        return $twig->render('O46-Theme::Containers.ItemLists.ItemList2', ["item" => $arg[0]]);
+        return $twig->render('O46theme::Containers.ItemLists.ItemList2', ["item" => $arg[0]]);
     }
 }

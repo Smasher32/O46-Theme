@@ -1,20 +1,20 @@
-# Release Notes for O46-Theme
+# Release Notes for O46theme
 
 ## v1.0.7 (2019-05-02)
 
 ### TODO
 
-- Please save all changes made to O46-Theme before executing the update. All changes will be reset during the update process.
+- Please save all changes made to O46theme before executing the update. All changes will be reset during the update process.
 
 ### Fixed
 
-- O46-Theme is now compatible with Ceres 4.0.0.
+- O46theme is now compatible with Ceres 4.0.0.
 
 ## v1.0.6 (2019-01-30)
 
 ### TODO
 
-- Please save all changes made to O46-Theme before executing the update. All changes will be reset during the update process.
+- Please save all changes made to O46theme before executing the update. All changes will be reset during the update process.
 
 ### Added
 
@@ -28,7 +28,7 @@
 
 ### TODO
 
-- Please save all changes made to O46-Theme before executing the update. All changes will be reset during the update process.
+- Please save all changes made to O46theme before executing the update. All changes will be reset during the update process.
 
 ### Added
 
@@ -38,7 +38,7 @@
 
 ### Fixed
 
-- Due to an error, result fields weren't loaded correctly from O46-Theme. This has been fixed.
+- Due to an error, result fields weren't loaded correctly from O46theme. This has been fixed.
 
 ## v1.0.2 (2019-01-21)
 
@@ -56,6 +56,6 @@
 
 ### Added
 
-- Plugin files to make O46-Theme compatible with Ceres 3.0.0.
+- Plugin files to make O46theme compatible with Ceres 3.0.0.
 - Functionality for overriding result fields in the plugin configuration.
 - Functionality for overriding CSS, templates and partials by activating the respective template in the plugin configuration.

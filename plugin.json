@@ -1,37 +1,37 @@
 {
     "version"           :   "1.0.0",
-    "name"              :   "O46-Theme",
+    "name"              :   "O46theme",
     "pluginIcon"        :   "icon_plugin_xs.png",
     "authorIcon"        :   "icon_author_xs.png",
     "email"             :   "marcel@outlet46.de",
     "phone"             :   "+49 53213896790",
     "description"       :   "A Coconut theme for Ceres 3.",
-    "namespace"         :   "O46-Theme",
+    "namespace"         :   "O46theme",
     "author"            :   "Smasher",
     "type"              :   "theme",
     "require"           :   {
                                 "Ceres":">= 3.0.0"
                             },
-    "serviceProvider"   :   "O46-Theme\\Providers\\O46-ThemeServiceProvider",
+    "serviceProvider"   :   "O46theme\\Providers\\O46themeServiceProvider",
     "dataProviders"     :
     [
         {
-            "key"           :"O46-Theme\\Containers\\O46-ThemeContainer",
+            "key"           :"O46theme\\Containers\\O46themeContainer",
             "name"          :"Stylesheet",
             "description"   :"Add changes to the CSS file"
         },
         {
-            "key"           :"O46-Theme\\Containers\\O46-ThemeItemListContainer1",
+            "key"           :"O46theme\\Containers\\O46themeItemListContainer1",
             "name"          :"First item list",
             "description"   :"Display a configurable list of items in your online store"
         },
         {
-            "key"           :"O46-Theme\\Containers\\O46-ThemeItemListContainer2",
+            "key"           :"O46theme\\Containers\\O46themeItemListContainer2",
             "name"          :"Second item list",
             "description"   :"Display a configurable list of items in your online store"
         },
         {
-            "key"           :"O46-Theme\\Containers\\O46-ThemeItemListContainer3",
+            "key"           :"O46theme\\Containers\\O46themeItemListContainer3",
             "name"          :"Third item list",
             "description"   :"Display a configurable list of items in your online store"
         }
