@@ -1,11 +1,14 @@
 {
-    "name"                  :"O46-Theme",
-    "description"           :"O46-Theme",
-    "namespace"             :"O46-Theme",
-    "author"                :"Smasher-Marcel",
-    "keywords"              : ["o46", "Ceres", "template"],
-    "type"                  :"theme",
-    "require"               : [],
+    "name"              : "O46-Theme",
+    "namespace"         : "O46-Theme",
+    "type"              : "theme",
+    "version"           : "1.0.0",
+    "pluginIcon"        : "icon_plugin_xs.png",
+    "description"       : "The description for your plugin",
+    "author"            : "Your name",
+    "authorIcon"        : "The author icon",
+    "email"             : "Your email address",
+    "phone"             : "Your phone number",
     "serviceProvider"       :"O46-Theme\\Providers\\ThemeServiceProvider",
     "dataProviders"         :
     [
