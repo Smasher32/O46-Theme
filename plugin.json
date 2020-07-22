@@ -14,26 +14,12 @@
                             },
     "serviceProvider"   :   "O46theme\\Providers\\O46themeServiceProvider",
     "dataProviders"     :
-    [
+     [
         {
-            "key"           :"O46theme\\Containers\\O46themeContainer",
-            "name"          :"Stylesheet",
-            "description"   :"Add changes to the CSS file"
-        },
-        {
-            "key"           :"O46theme\\Containers\\O46themeItemListContainer1",
-            "name"          :"First item list",
-            "description"   :"Display a configurable list of items in your online store"
-        },
-        {
-            "key"           :"O46theme\\Containers\\O46themeItemListContainer2",
-            "name"          :"Second item list",
-            "description"   :"Display a configurable list of items in your online store"
-        },
-        {
-            "key"           :"O46theme\\Containers\\O46themeItemListContainer3",
-            "name"          :"Third item list",
-            "description"   :"Display a configurable list of items in your online store"
+            "key"           :"O46theme\\Containers\\O46themeCategoryItemVueTemplateContainer",
+            "name"          :"Container for CategoryItem Component Template",
+            "description"   :"Container for CategoryItem Component Template",
+            "defaultLayoutContainer": "Ceres::Script.AfterScriptsLoaded"
         }
     ]
 }
