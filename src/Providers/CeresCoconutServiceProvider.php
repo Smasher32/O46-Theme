@@ -1,6 +1,6 @@
 <?php
 
-namespace CeresCoconut\Providers;
+namespace O46-Theme\Providers;
 
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Events\Dispatcher;
@@ -12,10 +12,10 @@ use Plenty\Plugin\ConfigRepository;
 
 
 /**
- * Class CeresCoconutServiceProvider
- * @package CeresCoconut\Providers
+ * Class O46-ThemeServiceProvider
+ * @package O46-Theme\Providers
  */
-class CeresCoconutServiceProvider extends ServiceProvider
+class O46-ThemeServiceProvider extends ServiceProvider
 {
     const PRIORITY = 0;
 
@@ -26,7 +26,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
     public function boot(Twig $twig, Dispatcher $dispatcher, ConfigRepository $config)
     {
-        $enabledOverrides = explode(", ", $config->get("CeresCoconut.templates.override"));
+        $enabledOverrides = explode(", ", $config->get("O46-Theme.templates.override"));
 
         // Override partials
         $dispatcher->listen('IO.init.templates', function (Partial $partial) use ($enabledOverrides)
@@ -38,22 +38,22 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             if (in_array("head", $enabledOverrides) || in_array("all", $enabledOverrides))
             {
-                $partial->set('head', 'CeresCoconut::PageDesign.Partials.Head');
+                $partial->set('head', 'O46-Theme::PageDesign.Partials.Head');
             }
 
             if (in_array("header", $enabledOverrides) || in_array("all", $enabledOverrides))
             {
-                $partial->set('header', 'CeresCoconut::PageDesign.Partials.Header.Header');
+                $partial->set('header', 'O46-Theme::PageDesign.Partials.Header.Header');
             }
 
             if (in_array("page_design", $enabledOverrides) || in_array("all", $enabledOverrides))
             {
-                $partial->set('page-design', 'CeresCoconut::PageDesign.PageDesign');
+                $partial->set('page-design', 'O46-Theme::PageDesign.PageDesign');
             }
 
             if (in_array("footer", $enabledOverrides) || in_array("all", $enabledOverrides))
             {
-                $partial->set('footer', 'CeresCoconut::PageDesign.Partials.Footer');
+                $partial->set('footer', 'O46-Theme::PageDesign.Partials.Footer');
             }
 
             return false;
@@ -65,7 +65,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.home', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::Homepage.Homepage');
+                $container->setTemplate('O46-Theme::Homepage.Homepage');
                 return false;
             }, self::PRIORITY);
         }
@@ -76,7 +76,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.category.content', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::Category.Content.CategoryContent');
+                $container->setTemplate('O46-Theme::Category.Content.CategoryContent');
                 return false;
             }, self::PRIORITY);
         }
@@ -87,7 +87,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.category.item', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::Category.Item.CategoryItem');
+                $container->setTemplate('O46-Theme::Category.Item.CategoryItem');
                 return false;
             }, self::PRIORITY);
         }
@@ -98,7 +98,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.basket', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::Basket.Basket');
+                $container->setTemplate('O46-Theme::Basket.Basket');
                 return false;
             }, self::PRIORITY);
         }
@@ -109,7 +109,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.checkout', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::Checkout.CheckoutView');
+                $container->setTemplate('O46-Theme::Checkout.CheckoutView');
                 return false;
             }, self::PRIORITY);
         }
@@ -120,7 +120,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.confirmation', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::Checkout.OrderConfirmation');
+                $container->setTemplate('O46-Theme::Checkout.OrderConfirmation');
                 return false;
             }, self::PRIORITY);
         }
@@ -131,7 +131,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.login', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::Customer.Login');
+                $container->setTemplate('O46-Theme::Customer.Login');
                 return false;
             }, self::PRIORITY);
         }
@@ -142,7 +142,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.register', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::Customer.Register');
+                $container->setTemplate('O46-Theme::Customer.Register');
                 return false;
             }, self::PRIORITY);
         }
@@ -153,7 +153,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.item', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::Item.SingleItemWrapper');
+                $container->setTemplate('O46-Theme::Item.SingleItemWrapper');
                 return false;
             }, self::PRIORITY);
         }
@@ -164,7 +164,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.search', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::ItemList.ItemListView');
+                $container->setTemplate('O46-Theme::ItemList.ItemListView');
                 return false;
             }, self::PRIORITY);
         }
@@ -175,7 +175,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.my-account', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::MyAccount.MyAccountView');
+                $container->setTemplate('O46-Theme::MyAccount.MyAccountView');
                 return false;
             }, self::PRIORITY);
         }
@@ -186,7 +186,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.wish-list', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::WishList.WishListView');
+                $container->setTemplate('O46-Theme::WishList.WishListView');
                 return false;
             }, self::PRIORITY);
         }
@@ -197,7 +197,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.contact', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::Customer.Contact');
+                $container->setTemplate('O46-Theme::Customer.Contact');
                 return false;
             }, self::PRIORITY);
         }
@@ -208,7 +208,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.order.return', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::OrderReturn.OrderReturnView');
+                $container->setTemplate('O46-Theme::OrderReturn.OrderReturnView');
                 return false;
             }, self::PRIORITY);
         }
@@ -219,7 +219,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.order.return.confirmation', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::OrderReturn.OrderReturnConfirmation');
+                $container->setTemplate('O46-Theme::OrderReturn.OrderReturnConfirmation');
                 return false;
             }, self::PRIORITY);
         }
@@ -230,7 +230,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.cancellation-rights', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::StaticPages.CancellationRights');
+                $container->setTemplate('O46-Theme::StaticPages.CancellationRights');
                 return false;
             }, self::PRIORITY);
         }
@@ -241,7 +241,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.cancellation-form', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::StaticPages.CancellationForm');
+                $container->setTemplate('O46-Theme::StaticPages.CancellationForm');
                 return false;
             }, self::PRIORITY);
         }
@@ -252,7 +252,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.legal-disclosure', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::StaticPages.LegalDisclosure');
+                $container->setTemplate('O46-Theme::StaticPages.LegalDisclosure');
                 return false;
             }, self::PRIORITY);
         }
@@ -263,7 +263,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.privacy-policy', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::StaticPages.PrivacyPolicy');
+                $container->setTemplate('O46-Theme::StaticPages.PrivacyPolicy');
                 return false;
             }, self::PRIORITY);
         }
@@ -274,7 +274,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.terms-conditions', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::StaticPages.TermsAndConditions');
+                $container->setTemplate('O46-Theme::StaticPages.TermsAndConditions');
                 return false;
             }, self::PRIORITY);
         }
@@ -285,7 +285,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.item-not-found', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::StaticPages.ItemNotFound');
+                $container->setTemplate('O46-Theme::StaticPages.ItemNotFound');
                 return false;
             }, self::PRIORITY);
         }
@@ -296,7 +296,7 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.page-not-found', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::StaticPages.PageNotFound');
+                $container->setTemplate('O46-Theme::StaticPages.PageNotFound');
                 return false;
             }, self::PRIORITY);
         }
@@ -307,16 +307,16 @@ class CeresCoconutServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.newsletter.opt-out', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresCoconut::Newsletter.NewsletterOptOut');
+                $container->setTemplate('O46-Theme::Newsletter.NewsletterOptOut');
                 return false;
             }, self::PRIORITY);
         }
 
         $enabledResultFields = [];
 
-        if(!empty($config->get("CeresCoconut.result_fields.override")))
+        if(!empty($config->get("O46-Theme.result_fields.override")))
         {
-            $enabledResultFields = explode(", ", $config->get("CeresCoconut.result_fields.override"));
+            $enabledResultFields = explode(", ", $config->get("O46-Theme.result_fields.override"));
         }
 
         if(!empty($enabledResultFields))
@@ -328,31 +328,31 @@ class CeresCoconutServiceProvider extends ServiceProvider
                 // Override list item result fields
                 if (in_array("list_item", $enabledResultFields) || in_array("all", $enabledResultFields))
                 {
-                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_LIST_ITEM] = 'CeresCoconut::ResultFields.ListItem';
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_LIST_ITEM] = 'O46-Theme::ResultFields.ListItem';
                 }
                 
                 // Override single item view result fields
                 if (in_array("single_item", $enabledResultFields) || in_array("all", $enabledResultFields))
                 {
-                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_SINGLE_ITEM] = 'CeresCoconut::ResultFields.SingleItem';
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_SINGLE_ITEM] = 'O46-Theme::ResultFields.SingleItem';
                 }
                 
                 // Override basket item result fields
                 if (in_array("basket_item", $enabledResultFields) || in_array("all", $enabledResultFields))
                 {
-                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_BASKET_ITEM] = 'CeresCoconut::ResultFields.BasketItem';
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_BASKET_ITEM] = 'O46-Theme::ResultFields.BasketItem';
                 }
 
                 // Override auto complete list item result fields
                 if (in_array("auto_complete_list_item", $enabledResultFields) || in_array("all", $enabledResultFields))
                 {
-                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_AUTOCOMPLETE_ITEM_LIST] = 'CeresCoconut::ResultFields.AutoCompleteListItem';
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_AUTOCOMPLETE_ITEM_LIST] = 'O46-Theme::ResultFields.AutoCompleteListItem';
                 }
                 
                 // Override category tree result fields
                 if (in_array("category_tree", $enabledResultFields) || in_array("all", $enabledResultFields))
                 {
-                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_CATEGORY_TREE] = 'CeresCoconut::ResultFields.CategoryTree';
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_CATEGORY_TREE] = 'O46-Theme::ResultFields.CategoryTree';
                 }
 
                 $templateContainer->setTemplates($templatesToOverride);
