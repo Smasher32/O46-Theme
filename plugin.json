@@ -1,0 +1,18 @@
+{
+    "name"                  :"O46-Theme",
+    "description"           :"O46-Theme",
+    "namespace"             :"O46-Theme",
+    "author"                :"Smasher-Marcel",
+    "keywords"              : ["o46", "Ceres", "template"],
+    "type"                  :"theme",
+    "require"               : [],
+    "serviceProvider"       :"O46-Theme\\Providers\\ThemeServiceProvider",
+    "dataProviders"         :
+    [
+        {
+            "key"           :"O46-Theme\\Containers\\ThemeContainer",
+            "name"          :"Dark background",
+            "description"   :"Change the background colour of the Ceres template"
+        }
+    ] 
+}
