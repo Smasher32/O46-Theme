@@ -1,8 +1,8 @@
 {
-    "marketplaceName"   : {"de":"Ceres Coconut","en":"Ceres Coconut"},
+    "marketplaceName"   : {"de":"Ceres O46","en":"Ceres O46"},
     "license"           : "AGPL-3.0",
     "price"             : 0.00,
-    "shortDescription"  : { "de": "Ein Coconut-Theme für Ceres 3.", "en": "A Coconut theme for Ceres 3." },
+    "shortDescription"  : { "de": "Ein Coconut-Theme für Ceres 3.", "en": "A O46 Theme for Ceres 3." },
     "categories"        : ["3518"],
     "keywords"          : ["plentymarkets", "plugins", "layout", "theme", "ceres"]
 }
