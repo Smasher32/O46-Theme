@@ -1,0 +1,39 @@
+{
+    "version"           :   "1.0.7",
+    "name"              :   "O46-Theme",
+    "pluginIcon"        :   "icon_plugin_xs.png",
+    "authorIcon"        :   "icon_author_xs.png",
+    "email"             :   "sales@plentymarkets.com",
+    "phone"             :   "+49 561 98 681 100",
+    "description"       :   "A Coconut theme for Ceres 3.",
+    "namespace"         :   "O46-Theme",
+    "author"            :   "plentysystems AG",
+    "type"              :   "theme",
+    "require"           :   {
+                                "Ceres":">= 3.0.0"
+                            },
+    "serviceProvider"   :   "O46-Theme\\Providers\\O46-ThemeServiceProvider",
+    "dataProviders"     :
+    [
+        {
+            "key"           :"O46-Theme\\Containers\\O46-ThemeContainer",
+            "name"          :"Stylesheet",
+            "description"   :"Add changes to the CSS file"
+        },
+        {
+            "key"           :"O46-Theme\\Containers\\O46-ThemeItemListContainer1",
+            "name"          :"First item list",
+            "description"   :"Display a configurable list of items in your online store"
+        },
+        {
+            "key"           :"O46-Theme\\Containers\\O46-ThemeItemListContainer2",
+            "name"          :"Second item list",
+            "description"   :"Display a configurable list of items in your online store"
+        },
+        {
+            "key"           :"O46-Theme\\Containers\\O46-ThemeItemListContainer3",
+            "name"          :"Third item list",
+            "description"   :"Display a configurable list of items in your online store"
+        }
+    ]
+}
